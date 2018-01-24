@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -10,6 +10,65 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Old+Standard+TT:700" rel="stylesheet">
   	<style>
+        @media only screen and (min-width: 768px) {
+            #banner{
+      			position: absolute;
+      			top: 35% !important;
+      			width:100%;
+      			text-align: center;
+      		}
+            #bannerHeading{
+      			color: white;
+      			font-size: 150px !important;
+      			font-family: 'Abril Fatface', cursive;
+      		}
+            .icecream{
+                height: 100vh;
+            }
+            .icecream>.col-sm-12{
+                height: 100%;
+            }
+            .icecream.col-sm-12>.row{
+
+            }
+            .icecream>.col-sm-12>.row{
+                height: 100%;
+                width: 90%;
+                position: absolute;
+                left: 10%;
+            }
+            .icecreamText{
+                color: #FF833D;
+      			font-family: 'Old Standard TT', serif;
+      			font-size: 70px;
+                height: 100%;
+                line-height: 1;
+                text-align: center;
+            }
+            .icecreamText>span{
+                position: relative;
+                top: 35%;
+            }
+        }
+        @media only screen and (min-width: 1476px) {
+            .birth{
+                width: 75%;
+                margin: 0 auto !important;
+            }
+            .icecream{
+                width: 75% !important;
+                margin: 0 auto !important;
+            }
+            .capeMan>img{
+                height: 50% !important;
+                width: 50% !important;
+                padding-left: 10%;
+            }
+            .icecreamText>span{
+                position: relative;
+                top: 40% !important;
+            }
+        }
   		.mainContainer{
   			margin: 0;
   			padding: 0;
@@ -57,11 +116,19 @@
   			color: rgba(242, 153, 74, 1)
   		}
   		.capeMan{
-  			margin-bottom: 5%;
+            margin-top: 3%;
+  			margin-bottom: 10%;
   		}
+        .capeMan>img{
+            height: 70%;
+            width: 70%;
+        }
   		.birth{
   			margin-bottom: 0;
   		}
+        .birth>.col-sm-12>.row{
+            margin-bottom: 10%;
+        }
   		.unicodeBirth{
   			color: #FF833D;
   			font-family: 'Old Standard TT', serif;
@@ -70,12 +137,19 @@
   		#unicodeBirthText{
   			font-family: 'Raleway', cursive;
   			font-size: 15px;
+            padding: 20px;
   		}
   		.teachers{
   			background-color: #222;
-  			height:40vh;
+            min-height: 40vh;
   			padding: 0 30px;
   		}
+        .teachers>.col-sm-3{
+            height: 100%;
+        }
+        .teachers>.col-sm-3>img{
+            margin: 0 auto;
+        }
   		#teacherHeading{
   			color: #222;
   			font-family: 'Old Standard TT', serif;
@@ -86,8 +160,56 @@
   			bottom: 0;
   			margin-bottom: -32px;
   		}
+        /*.icecream{
+            height: 100vh;
+        }
+        .icecream>.col-sm-12{
+            height: 100%;
+        }
+        .icecream.col-sm-12>.row{
+
+        }
+        .icecream>.col-sm-12>.row{
+            height: 100%;
+            width: 90%;
+            position: absolute;
+            left: 10%;
+        }
+        .icecreamText{
+            color: #FF833D;
+  			font-family: 'Old Standard TT', serif;
+  			font-size: 70px;
+            height: 100%;
+            line-height: 1;
+            text-align: center;
+        }
+        .icecreamText>span{
+            position: relative;
+            top: 40%;
+        }*/
+        .tools{
+            color: #353535;
+  			font-family: 'Raleway', cursive;
+  			font-size: 20px;
+            text-align: center;
+            line-height: 1;
+        }
+        .footer{
+            background-color: #222;
+            padding: 30px;
+            /*height: 100px;*/
+            text-align: center;
+            color: white;
+            font-family: 'Raleway', cursive;
+  			font-size: 15px;
+        }
+        .footer>p{
+            position: relative;
+            top: 35%;
+            margin-bottom: 0;
+        }
   	</style>
-  </head>  
+  </head>
   <body>
   	<div class="container-fluid mainContainer">
   		<div class="row landingPage">
@@ -102,16 +224,16 @@
   			</div>
   		</div>
   		<div class = "row capeMan">
-  			<img src = "CapeManFinal.png" height="70%" width="70%">
+  			<img src = "CapeManFinal.png"/>
   		</div>
   		<div class="row birth">
   			<div class="col-sm-12">
-  				<div class="row" style="margin-bottom: 5%">
+  				<div class="row">
 		  			<div class="col-sm-6" style="padding-left: 10%; line-height: 1">
 		  				<span class="unicodeBirth">How <span style="color: #FFAA5E; font-size: 70px">Unicode</span> was born</span>
 		  			</div>
 		  			<div class="col-sm-6">
-		  				<p id="unicodeBirthText" style="padding: 20px">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+		  				<p id="unicodeBirthText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
 		  			</div>
 		  		</div>
 		  		<div id="teacherHeading">
@@ -133,6 +255,28 @@
   				<!--Circle-->
   			</div>
   		</div>
+        <div class="row icecream">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-7 icecreamText">
+          				<span>We are a well balanced cone of ice cream.</span>
+                        <br/><br/>
+                        <span class="tools">Sprinkles provided by</span>
+          			</div>
+                    <div class="col-sm-5">
+
+          			</div>
+                </div>
+            </div>
+        </div>
+        <div class="row footer">
+            <p>Designed and developed by Unicode.
+            <br/><br/>
+            <a href="https://github.com/djunicode/DJ-Comps-Book-Exchange" target="_blank" rel="noopener noreferrer">
+                <img src="githubLogo.png" width="20px" height="20px" alt="GitHub Repository"/>
+            </a>
+            </p>
+        </div>
   	</div>
   </body>
 </html>
