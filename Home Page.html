@@ -22,8 +22,12 @@
       			font-size: 150px !important;
       			font-family: 'Abril Fatface', cursive;
       		}
+            .capemanMobile{
+                display: none !important;
+            }
             .icecream{
                 height: 100vh;
+                margin-top: 252px !important;
             }
             .icecream>.col-sm-12{
                 height: 100%;
@@ -39,14 +43,29 @@
             }
             .icecreamText{
                 color: #FF833D;
-      			    font-family: 'Old Standard TT', serif;
-      			    font-size: 70px;
+      			font-family: 'Old Standard TT', serif;
+      			font-size: 70px;
                 height: 100%;
                 line-height: 1;
+                text-align: center;
             }
             .icecreamText>span{
                 position: relative;
-                top: 25%;
+                top: 20%;
+            }
+            .icecream>.col-sm-12>.row>.col-sm-5{
+                height: 100%;
+            }
+            .icecreamImage{
+                position: relative;
+                top: 10%;
+                left: 25%;
+                height: 75%;
+            }
+            .plus{
+                color: #FFAA3D;
+      			font-family: 'Old Standard TT', serif;
+      			font-size: 25px;
             }
         }
         @media only screen and (min-width: 1476px) {
@@ -57,15 +76,21 @@
             .icecream{
                 width: 75% !important;
                 margin: 0 auto !important;
+                margin-top: 252px !important;
             }
-            .capeMan>img{
-                height: 50% !important;
-                width: 50% !important;
+            /*.capeMan>img{
+                height: 150vh !important;
+                width: 100vw !important;
                 padding-left: 10%;
-            }
+            }*/
             .icecreamText>span{
                 position: relative;
-                top: 40% !important;
+                top: 25% !important;
+            }
+        }
+        @media only screen and (max-width: 768px) {
+            .capemanDesktop{
+                display: none !important;
             }
         }
   		.mainContainer{
@@ -87,9 +112,15 @@
   		#teamLink{
   			padding-right: 10px;
   		}
+        #teamLink>a{
+            color: #6ec399;
+        }
   		#projectsLink{
   			padding-right: 25px;
   		}
+        #projectsLink>a{
+            color: #5fc7e0;
+        }
   		.row{
   			margin: 0;
   		}
@@ -117,16 +148,23 @@
   		.capeMan{
             margin-top: 3%;
   			margin-bottom: 10%;
+            overflow: hidden;
   		}
-        .capeMan>img{
-            height: 70%;
-            width: 70%;
+        /*.capeMan>img{
+            height: 150vh;
+            width: 100vw;
+        }*/
+        .capemanDesktop{
+            display: block;
+        }
+        .capemanMobile{
+            display: block;
         }
   		.birth{
   			margin-bottom: 0;
   		}
         .birth>.col-sm-12>.row{
-            margin-bottom: 10%;
+            margin-bottom: 15%;
         }
   		.unicodeBirth{
   			color: #FF833D;
@@ -152,7 +190,7 @@
   		#teacherHeading{
   			color: #222;
   			font-family: 'Old Standard TT', serif;
-  			font-size: 70px;
+  			font-size: 71px;
   			width: 80%;
   			position: inherit;
   			left: 10%;
@@ -186,21 +224,19 @@
             position: relative;
             top: 40%;
         }*/
-        .confetti{
-          width:100%;
+        .icecreamcontainer{
+            background: url('Confetti.png') repeat-x;
         }
-        .icecreamImage{
-          height: 100%;
-          position: relative;
-          top: 2%;
-          float: right;
-          right: 11%
+        .icecreamcontainer>.col-sm-12{
+        }
+        .confetti{
+            width: 100%;
         }
         .tools{
             color: #353535;
-  			    font-family: 'Raleway', cursive;
-  		      font-size: 20px;
-            margin-left: 20%;
+  			font-family: 'Raleway', cursive;
+  			font-size: 20px;
+            text-align: center;
             line-height: 1;
         }
         .footer{
@@ -233,11 +269,11 @@
   			</div>
   		</div>
   		<div class = "row capeMan">
-  			<img src = "CapeManFinal.png"/>
+  			<img class="capemanDesktop" src = "CapeManDesktop.png" width='100%' height='100%'/>
+            <img class="capemanMobile" src = "CapeManMobile.png" width='100%' height='100%'/>
   		</div>
   		<div class="row birth">
   			<div class="col-sm-12">
-
   				<div class="row">
 		  			<div class="col-sm-6" style="padding-left: 10%; line-height: 1">
 		  				<span class="unicodeBirth">How <span style="color: #FFAA5E; font-size: 70px">Unicode</span> was born</span>
@@ -252,7 +288,6 @@
   			</div>
   		</div>
   		<div class="row teachers">
-
   			<div class="col-sm-3">
   				<!--Circle-->
   			</div>
@@ -266,27 +301,33 @@
   				<!--Circle-->
   			</div>
   		</div>
-        <div class="row icecream" style="margin-bottom: 40%">
+        <div class="row icecreamcontainer">
             <div class="col-sm-12">
-              <img src="Confetti.png" class="confetti">
-                <div class="row">
-                    <div class="col-sm-7 icecreamText">
-          				<span>We are a well balanced cone of <br>ice cream.</span>
-                        <br/>
-                        <span class="tools">Sprinkles provided by</span>
-          			     </div>
-                </div>
-                    <div class="col-sm-5">
+                <div class="row icecream">
+                    <div class="col-sm-12">
+                        <div class="row">
+                            <div class="col-sm-7 icecreamText">
+                  				<span>We are a well balanced cone of ice cream.</span>
+                                <br/><br/>
+                                <span class="tools">Sprinkles provided by</span>
+                                <br/>
+                                <span class="plus">
+                                    <img src="slack.png" width='25%'>+
+                                    <img src="github.png" width='25%' style="opacity: 0.45">
+                                </span>
+                  			</div>
+                            <div class="col-sm-5">
+                                <img src = "icecreamwText.png" class="icecreamImage">
+                  			</div>
+                        </div>
                     </div>
-                    <img src = "icecreamwText.png" class="icecreamImage">
-
-
+                </div>
             </div>
         </div>
         <div class="row footer">
             <p>Designed and developed by Unicode.
             <br/><br/>
-            <a href="https://github.com/djunicode/DJ-Comps-Book-Exchange" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/djunicode" target="_blank" rel="noopener noreferrer">
                 <img src="githubLogo.png" width="20px" height="20px" alt="GitHub Repository"/>
             </a>
             </p>
